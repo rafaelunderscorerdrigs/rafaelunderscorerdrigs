@@ -1,9 +1,6 @@
 let listaDeNumerosSorteados = [];
-<<<<<<< HEAD
+
 let numeroLimite = 100;
-=======
-let numeroLimite = 50;
->>>>>>> 2cedfa485e84642113ab725f0c5431163e283850
 let numeroSecreto = gerarNumAleatorio();
 let tentativas = 1;
 
@@ -11,16 +8,13 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', { rate: 1.2 });
 }
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'O game que você adivinha as coisas.');
-<<<<<<< HEAD
     exibirTextoNaTela('p', 'Escolha um número entre 1 e 100.');
-=======
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 50.');
->>>>>>> 2cedfa485e84642113ab725f0c5431163e283850
+
 }
 
 exibirMensagemInicial();
@@ -29,7 +23,7 @@ function verificarChute() {
     let chute = document.querySelector('input').value;
 
     if (chute == numeroSecreto) {
-        exibirTextoNaTela('h1', 'É isso, acertou!');
+        exibirTextoNaTela('h1', 'É isso, acertou!');                                             
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('p', mensagemTentativas);
@@ -50,7 +44,7 @@ function gerarNumAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
-    if (quantidadeDeElementosNaLista == numeroLimite){
+    if (quantidadeDeElementosNaLista == numeroLimite) {
         listaDeNumerosSorteados = [];
     };
 
