@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-<h2>Sobre</h2>
+<h2 style: center>Sobre</h2>
 <p>Projeto utilizado nos cursos de lógica de progremação da Alura.</p>
 
 ### Tecnologias
