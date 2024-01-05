@@ -24,3 +24,7 @@
 <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafaelunderscorerdrigs&layout=compact&langs_count=7&theme=dracula"/>
 <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api?username=rafaelunderscorerdrigs&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
 </div>
+
+
+![snake](https://github.com/rafaelunderscorerdrigs/rafaelunderscorerdrigs/blob/output/github-contribution-grid-snake.gif)
+
