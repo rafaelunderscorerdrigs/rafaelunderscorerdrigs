@@ -1,0 +1,11 @@
+# Ignorar o mapa gerado (saída do código)
+meu_roteiro_rio_do_sul.html
+
+# Ignorar pastas de configuração do VS Code e Python
+.vscode/
+__pycache__/
+*.pyc
+
+# Ignorar ambientes virtuais (se você criar um)
+venv/
+.env
