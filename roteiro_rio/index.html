@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_19b0276564fda0b07ae53ed1a37c3880 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
+</head>
+<body>
+    
+    
+<div id="minha-legenda" class="map-legend">
+    <h4 style="margin-top:0">🗺️ Roteiro Rio do Sul</h4>
+    <p><span style="color:red">●</span> <b>Hospedagem</b></p>
+    <p><span style="color:blue">●</span> <b>Turismo / Lazer</b></p>
+    <small>Use o ícone de camadas (topo dir.) para ocultar.</small>
+</div>
+<style>
+    .map-legend {
+        position: fixed; bottom: 30px; left: 20px; width: 220px; z-index: 9999; 
+        background-color: white; padding: 15px; border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2); font-family: sans-serif;
+    }
+    @media (max-width: 768px) {
+        .map-legend { width: 180px; font-size: 11px; bottom: 80px; left: 10px; }
+    }
+</style>
+    
+            <div class="folium-map" id="map_19b0276564fda0b07ae53ed1a37c3880" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_19b0276564fda0b07ae53ed1a37c3880 = L.map(
+                "map_19b0276564fda0b07ae53ed1a37c3880",
+                {
+                    center: [-27.2146, -49.642],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e3b2a5e81b7a4d02e54f6e928dbf253c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e3b2a5e81b7a4d02e54f6e928dbf253c.addTo(map_19b0276564fda0b07ae53ed1a37c3880);
+        
+    
+            var poly_line_9ab2e6f59d084044dce82124571c382f = L.polyline(
+                [[-27.214345, -49.641718], [-27.214377, -49.641695], [-27.214422, -49.641666], [-27.214457, -49.641643], [-27.214482, -49.641626], [-27.214517, -49.641608], [-27.21454, -49.641593], [-27.214563, -49.641577], [-27.214584, -49.641551], [-27.214589, -49.641531], [-27.21459, -49.641506], [-27.214574, -49.641451], [-27.214555, -49.641394], [-27.214525, -49.641332], [-27.214777, -49.641193], [-27.214966, -49.64161], [-27.215808, -49.643495]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_19b0276564fda0b07ae53ed1a37c3880);
+        
+    
+            poly_line_9ab2e6f59d084044dce82124571c382f.bindTooltip(
+                `<div>
+                     Trajeto Estimado
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_ae687f4d95ff3c24b8c26aee3048dd03 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f1ba33efe383af5f582e97f6030456a9 = L.marker(
+                [-27.2145, -49.642],
+                {
+  "name": "Airbnb (In\u00edcio)",
+}
+            ).addTo(feature_group_ae687f4d95ff3c24b8c26aee3048dd03);
+        
+    
+            var icon_99fe73e26cb96863e3c28aad447e350a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d52ab76caa39fe07874e1dbd801ff35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b27a5000ff02542bbeb36af70c61509 = $(`<div id="html_6b27a5000ff02542bbeb36af70c61509" style="width: 100.0%; height: 100.0%;">Airbnb (Início)</div>`)[0];
+                popup_1d52ab76caa39fe07874e1dbd801ff35.setContent(html_6b27a5000ff02542bbeb36af70c61509);
+            
+        
+
+        marker_f1ba33efe383af5f582e97f6030456a9.bindPopup(popup_1d52ab76caa39fe07874e1dbd801ff35)
+        ;
+
+        
+    
+    
+                marker_f1ba33efe383af5f582e97f6030456a9.setIcon(icon_99fe73e26cb96863e3c28aad447e350a);
+            
+    
+            var marker_acab634d1f684cb29c5fe22f1779a435 = L.marker(
+                [-27.2158, -49.6435],
+                {
+  "name": "Catedral S\u00e3o Jo\u00e3o Batista",
+}
+            ).addTo(feature_group_ae687f4d95ff3c24b8c26aee3048dd03);
+        
+    
+            var icon_c4ccee3fb7fda64afe7bc63452857d7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e96054ad900c5d93acc3ba2ba172d182 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f64184d836e1a26ea973dace5274b74 = $(`<div id="html_5f64184d836e1a26ea973dace5274b74" style="width: 100.0%; height: 100.0%;">Catedral São João Batista</div>`)[0];
+                popup_e96054ad900c5d93acc3ba2ba172d182.setContent(html_5f64184d836e1a26ea973dace5274b74);
+            
+        
+
+        marker_acab634d1f684cb29c5fe22f1779a435.bindPopup(popup_e96054ad900c5d93acc3ba2ba172d182)
+        ;
+
+        
+    
+    
+                marker_acab634d1f684cb29c5fe22f1779a435.setIcon(icon_c4ccee3fb7fda64afe7bc63452857d7d);
+            
+    
+            var marker_0a01895abd811c3f2d37fcf0190b5458 = L.marker(
+                [-27.2112, -49.6485],
+                {
+  "name": "Ponte dos Arcos",
+}
+            ).addTo(feature_group_ae687f4d95ff3c24b8c26aee3048dd03);
+        
+    
+            var icon_d8872908cb58a3716ea27acf0211cb78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec171f65e80f6075d0cf1e7c392c6f70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e0837aeb93f525bed33af041c58847a = $(`<div id="html_7e0837aeb93f525bed33af041c58847a" style="width: 100.0%; height: 100.0%;">Ponte dos Arcos</div>`)[0];
+                popup_ec171f65e80f6075d0cf1e7c392c6f70.setContent(html_7e0837aeb93f525bed33af041c58847a);
+            
+        
+
+        marker_0a01895abd811c3f2d37fcf0190b5458.bindPopup(popup_ec171f65e80f6075d0cf1e7c392c6f70)
+        ;
+
+        
+    
+    
+                marker_0a01895abd811c3f2d37fcf0190b5458.setIcon(icon_d8872908cb58a3716ea27acf0211cb78);
+            
+    
+            var marker_dc86305fc0075d8c35597566e6f6c82c = L.marker(
+                [-27.221, -49.635],
+                {
+  "name": "Parque Centen\u00e1rio",
+}
+            ).addTo(feature_group_ae687f4d95ff3c24b8c26aee3048dd03);
+        
+    
+            var icon_cf3f8dadcbfb2eca185bdfddb487e6a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_370315fb4da8f36e3e84d9a10afa3e98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b30a46b46d398ebef6ef7dd78d08c4dd = $(`<div id="html_b30a46b46d398ebef6ef7dd78d08c4dd" style="width: 100.0%; height: 100.0%;">Parque Centenário</div>`)[0];
+                popup_370315fb4da8f36e3e84d9a10afa3e98.setContent(html_b30a46b46d398ebef6ef7dd78d08c4dd);
+            
+        
+
+        marker_dc86305fc0075d8c35597566e6f6c82c.bindPopup(popup_370315fb4da8f36e3e84d9a10afa3e98)
+        ;
+
+        
+    
+    
+                marker_dc86305fc0075d8c35597566e6f6c82c.setIcon(icon_cf3f8dadcbfb2eca185bdfddb487e6a2);
+            
+    
+            var marker_30ac83610d0d1c6a7ba6faa3affe1735 = L.marker(
+                [-27.2105, -49.641],
+                {
+  "name": "Nardelli Gastronomia",
+}
+            ).addTo(feature_group_ae687f4d95ff3c24b8c26aee3048dd03);
+        
+    
+            var icon_b0171b2d69cd82fd7134306e6f1981cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_307764325ad02ce4fa19b01f7e2a6999 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e80b39e92ac5783e17956a3ebfb5f7db = $(`<div id="html_e80b39e92ac5783e17956a3ebfb5f7db" style="width: 100.0%; height: 100.0%;">Nardelli Gastronomia</div>`)[0];
+                popup_307764325ad02ce4fa19b01f7e2a6999.setContent(html_e80b39e92ac5783e17956a3ebfb5f7db);
+            
+        
+
+        marker_30ac83610d0d1c6a7ba6faa3affe1735.bindPopup(popup_307764325ad02ce4fa19b01f7e2a6999)
+        ;
+
+        
+    
+    
+                marker_30ac83610d0d1c6a7ba6faa3affe1735.setIcon(icon_b0171b2d69cd82fd7134306e6f1981cb);
+            
+    
+            feature_group_ae687f4d95ff3c24b8c26aee3048dd03.addTo(map_19b0276564fda0b07ae53ed1a37c3880);
+        
+    
+            var feature_group_53027c465971eb3619c835df14b8c201 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_53027c465971eb3619c835df14b8c201.addTo(map_19b0276564fda0b07ae53ed1a37c3880);
+        
+    
+
+            var geocoderOpts_geocoder_2c268c10f1e8027802e1a1790b30b81b = {
+  "collapsed": false,
+  "position": "topleft",
+  "defaultMarkGeocode": true,
+  "zoom": 15,
+  "provider": "nominatim",
+  "providerOptions": {
+},
+  "placeholder": "Pesquisar em Rio do Sul...",
+};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_2c268c10f1e8027802e1a1790b30b81b = geocoderOpts_geocoder_2c268c10f1e8027802e1a1790b30b81b["provider"];
+
+            var customGeocoder_geocoder_2c268c10f1e8027802e1a1790b30b81b = L.Control.Geocoder[ geocoderName_geocoder_2c268c10f1e8027802e1a1790b30b81b ](
+                geocoderOpts_geocoder_2c268c10f1e8027802e1a1790b30b81b['providerOptions']
+            );
+            geocoderOpts_geocoder_2c268c10f1e8027802e1a1790b30b81b["geocoder"] = customGeocoder_geocoder_2c268c10f1e8027802e1a1790b30b81b;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_2c268c10f1e8027802e1a1790b30b81b
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_2c268c10f1e8027802e1a1790b30b81b['zoom'] || map_19b0276564fda0b07ae53ed1a37c3880.getZoom();
+                map_19b0276564fda0b07ae53ed1a37c3880.setView(e.geocode.center, zoom);
+            }).addTo(map_19b0276564fda0b07ae53ed1a37c3880);
+
+        
+    
+            var feature_group_ae687f4d95ff3c24b8c26aee3048dd03searchControl = new L.Control.Search({
+                layer: feature_group_ae687f4d95ff3c24b8c26aee3048dd03,
+                
+                propertyName: 'name',
+                
+                collapsed: false,
+                textPlaceholder: 'Buscar no meu roteiro...',
+                position:'topleft',
+            
+                initial: false,
+                
+                hideMarkerOnCollapse: true
+            
+                });
+                feature_group_ae687f4d95ff3c24b8c26aee3048dd03searchControl.on('search:locationfound', function(e) {
+                    feature_group_ae687f4d95ff3c24b8c26aee3048dd03.setStyle(function(feature){
+                        return feature.properties.style
+                    })
+                    
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+                })
+                feature_group_ae687f4d95ff3c24b8c26aee3048dd03searchControl.on('search:collapsed', function(e) {
+                        feature_group_ae687f4d95ff3c24b8c26aee3048dd03.setStyle(function(feature){
+                            return feature.properties.style
+                    });
+                });
+            map_19b0276564fda0b07ae53ed1a37c3880.addControl( feature_group_ae687f4d95ff3c24b8c26aee3048dd03searchControl );
+
+        
+    
+            var layer_control_f8f236687e0b7d40316c65b72cd3545e_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_e3b2a5e81b7a4d02e54f6e928dbf253c,
+                },
+                overlays :  {
+                    "\ud83d\udccd Meus Locais" : feature_group_ae687f4d95ff3c24b8c26aee3048dd03,
+                    "\ud83d\udcdd Exibir Legenda" : feature_group_53027c465971eb3619c835df14b8c201,
+                },
+            };
+            let layer_control_f8f236687e0b7d40316c65b72cd3545e = L.control.layers(
+                layer_control_f8f236687e0b7d40316c65b72cd3545e_layers.base_layers,
+                layer_control_f8f236687e0b7d40316c65b72cd3545e_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_19b0276564fda0b07ae53ed1a37c3880);
+
+        
+</script>
+</html>
