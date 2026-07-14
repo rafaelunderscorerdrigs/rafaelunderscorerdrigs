@@ -1,55 +1,164 @@
-# 📖 Roteirizador Interativo de Viagens com Python & Folium
 
-## 📝 Descrição
-Este projeto nasceu da necessidade de organizar um roteiro de feriado em **Rio do Sul (SC)**. A aplicação automatiza a criação de um mapa interativo, calculando distâncias reais entre pontos turísticos, estadias (Airbnb) e locais de lazer, gerando um arquivo visual de fácil consulta.
+# 👋 Olá! Eu sou Rafael Rodrigues
 
----
+🎓 Estudante de **Análise e Desenvolvimento de Sistemas**
+💼 Assistente de Expedição na Bio Meds Brasil
+📍 Florianópolis - SC | Brasil
 
-## 🚀 Evolução e Desafios (Logs de Desenvolvimento)
-Durante o desenvolvimento, enfrentamos e resolvemos desafios técnicos reais:
-
-*   **Conflito de Interpretadores:** Resolvemos o erro `ModuleNotFoundError` garantindo que o `folium` fosse instalado no caminho absoluto do Python 3.14 usado pelo VS Code.
-*   **Segurança de Navegador (CORS):** Contornamos o bloqueio de acesso (Erro 403r) ao carregar *tiles* de mapas localmente, alternando para o provedor `CartoDB positron`.
-*   **Visualização de Dados:** Implementamos uma legenda dinâmica usando HTML injetado e cálculos geodésicos com a biblioteca `geopy`.
+Sou apaixonado por tecnologia, análise de dados, desenvolvimento web e criação de conteúdo. Gosto de transformar ideias em projetos práticos e estou sempre aprendendo novas ferramentas para evoluir como desenvolvedor.
 
 ---
 
-## 🛠️ Ferramentas Utilizadas
-*   **Python 3.14** (Lógica principal)
-*   **Folium** (Renderização do mapa interativo)
-*   **Geopy** (Cálculo de distâncias entre coordenadas)
-*   **VS Code** (Ambiente de desenvolvimento)
+# 🚀 Sobre mim
+
+* 🎓 Estudando Análise e Desenvolvimento de Sistemas
+* 📊 Apaixonado por Data Analytics e Business Intelligence
+* 🐍 Desenvolvendo projetos em Python
+* 🌐 Aprendendo Desenvolvimento Web
+* 📈 Buscando constantemente aprimorar minhas habilidades em programação
+* 🎮 Criador de conteúdo gamer no YouTube através do projeto **Pixel Frame Flow**
 
 ---
 
-## 📍 Funcionalidades
-*   **Marcadores Personalizados:** Ícones coloridos por categoria (Início, Airbnb, Lazer).
-*   **Traçado de Rota:** Linha pontilhada conectando todos os destinos em sequência.
-*   **Legenda Lateral Dinâmica:** Uma caixa flutuante (HUD) que mostra a distância exata em quilômetros de cada trecho do roteiro.
+# 💻 Tecnologias
+
+### Linguagens
+
+* Python
+* HTML5
+* CSS3
+* SQL (em aprendizado)
+
+### Bibliotecas
+
+* Pandas
+* NumPy
+* Matplotlib
+
+### Ferramentas
+
+* Git
+* GitHub
+* Visual Studio Code
+* Excel
+* OBS Studio
+* Streamlabs
 
 ---
 
-## 🔧 Como Executar
-1. Certifique-se de ter o Python instalado.
-2. Instale as dependências:
-   ```bash
-   pip install folium geopy
+# 📚 Projetos
 
-3. Execute o script:
+## 📊 Análise de Dados
 
-Bash
-python rio_sul.py
-Abra o arquivo meu_roteiro_rio_do_sul.html gerado no seu navegador.
+Projetos utilizando Python para:
 
-Projeto desenvolvido para fins de estudo e organização pessoal.
-
+* Manipulação de dados com Pandas
+* Limpeza de bases de dados
+* Estatísticas descritivas
+* Visualização de dados
+* Geração de relatórios
 
 ---
 
-### Dicas de formatação que usei:
-*   **H1 (`#`) e H2 (`##`):** Para criar a hierarquia visual.
-*   **Horizontal Rules (`---`):** Para separar as seções e não ficar uma "parede de texto".
-*   **Code Blocks (`` ` ``):** Para destacar nomes de erros, arquivos e comandos que devem ser digitados no terminal.
-*   **Negrito (`**`):** Para destacar os pontos chave.
+## 🌍 Mapas Interativos
 
-Agora seu GitHub vai parecer projeto de desenvolvedor Sênior! Só salvar e subir.
+Projetos utilizando:
+
+* Folium
+* Geolocalização
+* Visualização geográfica
+
+---
+
+## 🌐 Desenvolvimento Web
+
+Projetos utilizando:
+
+* HTML5
+* CSS3
+* Layout Responsivo
+* Flexbox
+* Boas práticas de estruturação
+
+---
+
+## 🐍 Exercícios em Python
+
+Repositório contendo diversos exercícios envolvendo:
+
+* Estruturas condicionais
+* Estruturas de repetição
+* Funções
+* Listas
+* Tuplas
+* Dicionários
+* Manipulação de arquivos
+
+---
+
+## 📈 Estudos em Ciência de Dados
+
+Projetos voltados para:
+
+* Exploração de Dados (EDA)
+* Tratamento de Dados
+* Visualização
+* Estatística
+* Dashboards
+
+---
+
+# 🎮 Pixel Frame Flow
+
+Além da programação, produzo conteúdo sobre games no canal **Pixel Frame Flow**, onde compartilho gameplays cinematográficas, lives e séries focadas em narrativa.
+
+Atualmente, os principais conteúdos são:
+
+* 🎮 The Last of Us Part II
+* 🧟 Resident Evil 4 Remake
+
+---
+
+# 📖 Atualmente estudando
+
+* Python
+* SQL
+* Banco de Dados
+* Git e GitHub
+* Análise de Dados
+* Desenvolvimento Web
+* Power BI
+
+---
+
+# 📊 Estatísticas do GitHub
+
+<p align="center">
+
+<img height="170em" src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=tokyonight"/>
+
+<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO&layout=compact&theme=tokyonight"/>
+
+</p>
+
+---
+
+# 🚀 Objetivo
+
+Meu objetivo é construir soluções utilizando tecnologia, evoluir como desenvolvedor e compartilhar minha jornada de aprendizado através dos meus projetos e da criação de conteúdo.
+
+---
+
+## 📫 Contato
+
+📧 Email: [seuemail@email.com](mailto:seuemail@email.com)
+
+💼 LinkedIn: https://linkedin.com/in/seu-perfil
+
+🎥 YouTube: Pixel Frame Flow
+
+📸 Instagram: @rafael_rdrigs
+
+---
+
+⭐ Obrigado por visitar meu perfil!
